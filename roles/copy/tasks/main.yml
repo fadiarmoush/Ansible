@@ -1,0 +1,46 @@
+---
+# tasks file for /etc/ansible/roles/copy
+
+- name: Ansible copy file to remote server
+  copy:
+   src: "/root/cpuHour.sh"
+   dest: "/root/cpuHour.sh"
+   mode: 0777
+- name: Ansible copy file to remote server
+  copy:
+   src: "/root/perf/"
+   dest: "/root/perf/"
+   mode: 0777
+
+
+
+
+- name: Ansible copy file to remote server
+  copy:
+   src: "/root/cpuWork.sh"
+   dest: "/root/cpuWork.sh"
+   mode: 0777
+
+- name: Ansible copy file to remote server
+  copy:
+   src: "/root/diskAvg.sh"
+   dest: "/root/diskAvg.sh"
+   mode: 0777
+
+- name: Ansible copy file to remote server
+  copy:
+   src: "/root/diskWork.sh"
+   dest: "/root/diskWork.sh"
+   mode: 0777
+
+- name: Ansible copy file to remote server
+  copy:
+   src: "/root/memAvg.sh"
+   dest: "/root/memAvg.sh"
+   mode: 0777
+
+- name: Ansible copy file to remote server
+  copy:
+   src: "/root/memWork.sh"
+   dest: "/root/memWork.sh"
+   mode: 0777

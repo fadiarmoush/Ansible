@@ -1,0 +1,4 @@
+---
+# tasks file for /etc/ansible/roles/installation
+- import_tasks: mysql.yml
+- import_tasks: httpd.yml

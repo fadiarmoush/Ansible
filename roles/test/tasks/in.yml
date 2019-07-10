@@ -1,0 +1,14 @@
+---
+- hosts: [vm]
+  tasks:
+  - name: Write backup script for each app
+    shell: |
+      echo "hello {{ my_val }}" > /file.txt
+
+  - name: Ansible copy file to remote server
+    copy:
+      src: /file.txt
+      dest: /tmp
+  vars:
+    my_val: "{{ val }}"  
+

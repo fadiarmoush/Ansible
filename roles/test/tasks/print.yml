@@ -1,0 +1,4 @@
+- name: Write backup script for each app
+    shell: |
+      echo "hello {{ my_val }}" >> /file.txt
+

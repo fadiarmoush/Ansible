@@ -1,0 +1,20 @@
+---
+# tasks file for /etc/ansible/roles/cron
+
+- name: Ensure a job that runs at 2 and 5 exists. Creates an entry like "0 5,2 * * ls -alh > /dev/null"
+  cron:
+    name: "check dirs"
+    minute: "*/10"
+    job: "./cpuHour.sh"
+
+- name: Ensure a job that runs at 2 and 5 exists. Creates an entry like "0 5,2 * * ls -alh > /dev/null"
+  cron:
+    name: "check dirs"
+    minute: "*/10"
+    job: "./diskAvg.sh"
+
+- name: Ensure a job that runs at 2 and 5 exists. Creates an entry like "0 5,2 * * ls -alh > /dev/null"
+  cron:
+    name: "check dirs"
+    minute: "*/10"
+    job: "./memAvg.sh"

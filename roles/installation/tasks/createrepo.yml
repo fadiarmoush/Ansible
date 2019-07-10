@@ -1,0 +1,16 @@
+---
+- name: create repository
+  shell: createrepo "/rpm"
+
+- name: path
+  shell: |
+        echo '[fadi]
+             name=Custum Repisotory
+             baseurl=file:///rpm/
+             enabled=1
+             gpgcheck=0' >> /etc/yum.repos.d/fadi.repo
+
+
+    
+    
+

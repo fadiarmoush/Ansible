@@ -1,0 +1,7 @@
+---
+ - hosts: [vm]
+   roles:
+   - test
+   vars:
+    my_val: "{{ val }}"
+

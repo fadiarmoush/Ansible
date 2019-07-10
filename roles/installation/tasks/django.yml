@@ -1,0 +1,27 @@
+---
+  - name: ins
+    yum: name=python*  state=latest
+
+  - name: step one
+    shell:
+     cd / && mkdir ansper1 && cd ansper1
+
+  - name: step two
+    shell:
+     cd /ansper1 && virtualenv --python=python3 venv &&  source venv/bin/activate
+
+  - name: step four
+    shell:
+     cd /ansper1 &&  pip install Django==2.0.3 && pip install djangorestframework
+  
+  - name: step five
+    shell:
+     cd /ansper1 && django-admin.py startproject cpu1 . && django-admin.py startapp cpuApp1
+
+  - name: step six
+    shell:
+     cd /ansper1 &&  python manage.py migrate
+
+  - name: step seven
+    shell:
+     cd /ansper1 && python manage.py createsuperuser --email fadi@gmail.com --username admin

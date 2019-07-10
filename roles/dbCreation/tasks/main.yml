@@ -1,0 +1,18 @@
+---
+# tasks file for /etc/ansible/roles/dbCreation
+
+- name: create DB
+  shell: mysql -uroot -pFadi@1234 --connect-expired-password -e "CREATE DATABASE ansibleDB ; flush privileges; "
+
+- name: create cpu table 
+  shell: mysql -uroot -pFadi@1234 ansibleDB --connect-expired-password -e "CREATE TABLE cpuInfo (id int(10) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT, avg float ); flush privileges; "
+
+- name: create disk table
+  shell: mysql -uroot -pFadi@1234 ansibleDB --connect-expired-password -e "CREATE TABLE diskInfo (id int(10) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT, avgused float , avgaval float); flush privileges; "
+
+- name: create mem table
+  shell: mysql -uroot -pFadi@1234 ansibleDB --connect-expired-password -e "CREATE TABLE memInfo (id int(10) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT, avgused float , avgaval float); flush privileges; "
+
+
+
+

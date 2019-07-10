@@ -1,0 +1,10 @@
+---
+ - hosts: [vm]
+   roles:
+   - copy
+   #- createReop
+   #- install
+   #- pyInstall
+   #- dbCreation
+   #- cron
+   #- connectdjango
